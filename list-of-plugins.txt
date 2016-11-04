@@ -1,0 +1,6 @@
+https://github.com/xebialabs-community/xld-docker-plugin/releases/download/6.0.1/xld-docker-plugin-6.0.1.xldp
+https://github.com/xebialabs-community/xld-openshift-plugin/releases/download/v6.1.1/xld-openshift-plugin-6.1.1.xldp
+https://github.com/xebialabs-community/xld-repository-migration/releases/download/v4.0.1/xld-repository-migration-4.0.1.zip
+https://github.com/xebialabs-community/xld-versions-plugin/releases/download/1.0.3/xld-versions-plugin-1.0.3.jar
+https://github.com/xebialabs-community/xld-smoke-test-plugin/releases/download/v1.0.3/xld-smoke-test-plugin-1.0.3.xldp
+https://github.com/xebialabs-community/xld-advanced-command-plugin/releases/download/v3.1.0/xld-advanced-command-plugin-3.1.0.xldp
