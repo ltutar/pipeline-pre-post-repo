@@ -6,13 +6,13 @@ services:
     labels:
       io.rancher.container.pull_image: always
     environment:
-      - PLUGINS_FILE_URL=${PLUGINS_FILE_URL}
+      - PLUGINS_FILE_URL=${XLD_PLUGINS_FILE_URL}
   xlr-service:
     image: xlrelease:5.0.1
     labels:
       io.rancher.container.pull_image: always
     environment:
-      - PLUGINS_FILE_URL=${PLUGINS_FILE_URL}
+      - PLUGINS_FILE_URL=${XLR_PLUGINS_FILE_URL}
   jenkins-service:
     image: jenkins:2.19.1-alpine
     labels:
