@@ -3,17 +3,23 @@ version: '2'
 services:
   xld-service:
     image: xldeploy:5.5.5
+    ports:
+       - "4516:4516"
     labels:
       io.rancher.container.pull_image: always
     environment:
       - PLUGINS_FILE_URL=${XLD_PLUGINS_FILE_URL}
   xlr-service:
     image: xlrelease:5.0.1
+    ports:
+       - "5516:5516"
     labels:
       io.rancher.container.pull_image: always
     environment:
       - PLUGINS_FILE_URL=${XLR_PLUGINS_FILE_URL}
   jenkins-service:
     image: jenkins:2.19.1-alpine
+    ports:
+       - "8080:8080"
     labels:
       io.rancher.container.pull_image: always
