@@ -14,4 +14,4 @@ docker run -e PLUGINS_FILE_URL="https://raw.githubusercontent.com/ltutar/pipelin
 
 # Jenkins
 docker build -t rbcdjenkins:1.0 .
-docker run -e PLUGINS_FILE_URL="https://raw.githubusercontent.com/ltutar/pipeline-pre-post-repo/master/jenkins/plugins/list-of-plugins.txt" -p 8080:8080 rbcdjenkins:1.0
+docker run -e JENKINS_UC_DOWNLOAD="https://updates.jenkins.io/download" -e PLUGINS_FILE_URL="https://raw.githubusercontent.com/ltutar/pipeline-pre-post-repo/master/jenkins/plugins/list-of-plugins.txt" -p 8080:8080 rbcdjenkins:1.0
