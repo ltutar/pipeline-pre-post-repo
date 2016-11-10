@@ -18,8 +18,11 @@ services:
     environment:
       - PLUGINS_FILE_URL=${XLR_PLUGINS_FILE_URL}
   jenkins-service:
-    image: jenkins:2.19.1-alpine
+    image: rbcdjenkins:1.0
     ports:
        - "8080:8080"
     labels:
       io.rancher.container.pull_image: always
+    environment:
+      - JENKINS_UC_DOWNLOAD=${JENKINS_UC_DOWNLOAD}
+      - PLUGINS_FILE_URL=${JENKINS_PLUGINS_FILE_URL}
