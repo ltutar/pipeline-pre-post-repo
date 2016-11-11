@@ -2,7 +2,7 @@ version: '2'
 
 services:
   xld-service:
-    image: xldeploy:5.5.5
+    image: xldeploy:6.0.0
     ports:
        - "4516:4516"
     labels:
@@ -10,7 +10,7 @@ services:
     environment:
       - PLUGINS_FILE_URL=${XLD_PLUGINS_FILE_URL}
   xlr-service:
-    image: xlrelease:5.0.1
+    image: xlrelease:6.0.0
     ports:
        - "5516:5516"
     labels:
