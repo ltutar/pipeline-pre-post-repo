@@ -161,8 +161,7 @@
         "flagStatus": "OK",
         "tasks": [
           {
-            "id": "Applications/Release816554/Phase3407457/Task6588004",
-          "id": "Applications/Release394395671/Phase3407457/Task594984091",
+          "id": "Applications/Release816554/Phase3407457/Task6588004",
           "type": "xlrelease.ScriptTask",
           "$createdBy": "admin",
           "$createdAt": "2016-11-16T12:57:59.484+0000",
@@ -171,7 +170,7 @@
           "title": "Start dummy container",
           "flagStatus": "OK",
           "comments": [],
-          "container": "Applications/Release394395671/Phase3407457",
+          "container": "Applications/Release816554/Phase3407457",
           "attachments": [],
           "status": "PLANNED",
           "overdueNotified": false,
