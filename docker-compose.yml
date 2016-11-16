@@ -17,6 +17,7 @@ services:
       io.rancher.container.pull_image: always
     environment:
       - PLUGINS_FILE_URL=${XLR_PLUGINS_FILE_URL}
+      - TEMPLATES_FILE_URL=${TEMPLATES_FILE_URL}
   jenkins-service:
     image: jenkins:2.19.2
     ports:

@@ -1,0 +1,2 @@
+https://raw.githubusercontent.com/ltutar/pipeline-pre-post-repo/master/xlrelease/templates/xlrelease.json
+https://raw.githubusercontent.com/ltutar/pipeline-pre-post-repo/master/xlrelease/templates/xlreleasedummycontainer.json
