@@ -309,7 +309,7 @@
             "variableMapping": {},
             "server": "Configuration/Deployit/xldeployserver",
             "environment": "Production",
-            "deploymentPackage": "Applications/${APP_NAME}/${VERSION}",
+            "deploymentPackage": "${APP_NAME}/${VERSION}",
             "currentStep": 0,
             "totalStep": 0
           }
