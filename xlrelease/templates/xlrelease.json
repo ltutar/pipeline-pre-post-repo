@@ -253,11 +253,11 @@
           },
           {
             "id": "Applications/Release816554/Phase3407457/Task3884297",
-            "type": "xlrelease.CustomScriptTask",
+            "type": "xlrelease.ScriptTask",
             "$createdBy": "admin",
-            "$createdAt": "2016-08-30T12:35:37.700+0000",
+            "$createdAt": "2016-11-23T11:00:30.857+0000",
             "$lastModifiedBy": "admin",
-            "$lastModifiedAt": "2016-08-30T12:35:37.700+0000",
+            "$lastModifiedAt": "2016-11-23T13:43:58.939+0000",
             "title": "Destroy Dummy Container",
             "flagStatus": "OK",
             "comments": [],
@@ -270,18 +270,8 @@
             "hasBeenDelayed": false,
             "failuresCount": 0,
             "variableMapping": {},
-            "pythonScript": {
-              "id": "Applications/Release816554/Phase3407457/Task3884297/PythonScript",
-              "type": "remoteScript.Unix",
-              "$createdBy": "admin",
-              "$createdAt": "2016-08-30T12:35:37.705+0000",
-              "$lastModifiedBy": "admin",
-              "$lastModifiedAt": "2016-08-30T12:35:37.705+0000",
-              "customScriptTask": "Applications/Release816554/Phase3407457/Task3884297",
-              "port": 22,
-              "connectionType": "SCP",
-              "sudo": false
-            }
+            "tags": [],
+            "script": "import json\nimport os\nimport sys\nimport urllib2\n\ncattleurlenv = os.environ['CATTLE_URL']\ncattleurl = cattleurlenv.replace(\"v1\", \"v2-beta\")\nstackname = \"teststack\"\n\nstackreq = urllib2.Request(cattleurl + \"/projects/1a5/stacks\")\nstackreq.add_header('Content-Type', 'application/json')\nresponsestack = urllib2.urlopen(stackreq)\n\nresponsestackdata = json.load(responsestack)\n\nstackid = \"\"\nstacknames = responsestackdata['data']\nfor item in stacknames:\n    if (item['name'] == stackname):\n        print \"Stack name: \" + item['name'] + \"\\n\"\n        print \"Stack id: \" + item['id'] + \"\\n\"\n        stackid = item['id']\n\nif (stackid != \"\"):\n    servicedata = '{}'\n    jsonservicedata = json.loads(servicedata)\n    servicereq = urllib2.Request(cattleurl + \"/stacks/\" + stackid + \"/?action=remove\")\n    servicereq.add_header('content-type', 'application/json')\n\n    try:\n        responseservice = urllib2.urlopen(servicereq, json.dumps(jsonservicedata))\n        responseservicedata = json.load(responseservice)\n    except urllib2.URLError, e:\n        print 'Error: ', e\n        print 'URL: ', servicereq.get_full_url()\n        sys.exit()\nelse:\n    print stackname + \" does not exist. We do nothing.\""
           }
         ],
         "release": "Applications/Release816554",
