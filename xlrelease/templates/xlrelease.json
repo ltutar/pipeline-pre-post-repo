@@ -211,7 +211,7 @@
             "$createdAt": "2016-08-30T12:35:37.699+0000",
             "$lastModifiedBy": "admin",
             "$lastModifiedAt": "2016-08-30T12:36:46.713+0000",
-            "title": "Deploy App to Dummy Environment",
+            "title": "Deploy Application to Dummy Environment",
             "flagStatus": "OK",
             "comments": [],
             "container": "Applications/Release816554/Phase3407457",
